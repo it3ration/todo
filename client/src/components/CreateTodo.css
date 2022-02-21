@@ -1,0 +1,68 @@
+@media only screen and (max-width: 595px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .not-creating {
+    display: none;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .not-creating {
+    display: none;
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .not-creating {
+    display: none;
+  }
+  .button {
+    display: flex;
+  }
+  .create-button {
+    border: 2px solid green;
+    margin: 0 5px;
+  }
+
+  .cancel-button {
+    border: 2px solid red;
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}

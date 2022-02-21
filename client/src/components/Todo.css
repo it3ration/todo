@@ -1,0 +1,162 @@
+@media only screen and (max-width: 595px) {
+  .todo {
+    border: 10px solid black;
+    width: 75vw;
+    text-align: initial;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .buttons {
+    margin: 10px 0;
+  }
+
+  .button-row {
+    display: flex;
+
+    margin: 10px;
+  }
+
+  .edit-input {
+    display: flex;
+  }
+  .not-editing {
+    display: none;
+  }
+
+  .edit-button {
+    border: 2px solid green;
+    margin: 0 5px;
+    padding: 5px;
+  }
+
+  .edit-buttons {
+    margin-top: 10px;
+  }
+
+  .input-label {
+    display: block;
+    margin: 5px;
+  }
+
+  .delete-button {
+    border: 2px solid red;
+    padding: 5px;
+    margin: 0 5px;
+  }
+  .error-message {
+    color: red;
+    margin: 10px 0;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+  .todo {
+    border: 10px solid black;
+    width: 75vw;
+    text-align: initial;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .buttons {
+    margin: 10px 0;
+  }
+
+  .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .edit-input {
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .todo-edit {
+    display: flex;
+    flex-direction: column;
+  }
+  .not-editing {
+    display: none;
+  }
+
+  .edit-buttons {
+    margin-top: 10px;
+  }
+
+  .input-label {
+    display: block;
+    margin: 5px;
+  }
+
+  .edit-button {
+    border: 2px solid green;
+    padding: 5px;
+  }
+
+  .delete-button {
+    border: 2px solid red;
+    padding: 5px;
+    margin: 0 5px;
+  }
+  .error-message {
+    color: red;
+    margin: 10px 0;
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .todo {
+    border: 10px solid black;
+    width: 75vw;
+    text-align: initial;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .buttons {
+    margin: 10px 0;
+  }
+
+  .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .edit-input {
+    display: flex;
+    justify-content: space-between;
+  }
+  .not-editing {
+    display: none;
+  }
+
+  .edit-button {
+    border: 2px solid green;
+    padding: 5px;
+  }
+
+  .delete-button {
+    border: 2px solid red;
+    padding: 5px;
+    margin: 0 5px;
+  }
+
+  .error-message {
+    color: red;
+    margin: 10px 0;
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}
