@@ -10,6 +10,7 @@ const Todo = (props) => {
       task: "",
       completed: "",
       note: "",
+      frequency: "",
     },
     validationSchema: Yup.object({
       task: Yup.string().required("Please enter a task!"),
@@ -20,13 +21,15 @@ const Todo = (props) => {
         )
         .required("Please enter whether or not its completed!"),
       note: Yup.string().required("Please enter a note!"),
+      frequency: Yup.number().required("Please enter a number"),
     }),
     onSubmit: (values) => {
       props.update(
         props._id,
         formik.values.task,
         formik.values.completed,
-        formik.values.note
+        formik.values.note,
+        formik.values.frequency
       );
 
       handleEditing();
@@ -56,6 +59,10 @@ const Todo = (props) => {
       <h4>
         Note:
         {props.note}
+      </h4>
+      <h4>
+        Frequency:
+        {props.frequency}
       </h4>
       <div className="bottom-row">
         <div className="buttons">
@@ -113,6 +120,19 @@ const Todo = (props) => {
               ></input>
               {formik.touched.note && formik.errors.note ? (
                 <div className="error-message">{formik.errors.note}</div>
+              ) : null}
+              <label className="input-label" htmlFor="frequency">
+                frequency:
+              </label>
+              <input
+                type="text"
+                id="frequency"
+                name="frequency"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              ></input>
+              {formik.touched.frequency && formik.errors.frequency ? (
+                <div className="error-message">{formik.errors.frequency}</div>
               ) : null}
               <div className="edit-buttons">
                 <button type="submit" onClick={formik.onSubmit}>

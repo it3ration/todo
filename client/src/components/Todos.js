@@ -11,6 +11,7 @@ const Todos = (props) => {
           task={todo.task}
           note={todo.note}
           key={todo._id}
+          frequency={todo.frequency}
           isCompleted={todo.isCompleted.toString()}
           _id={todo._id}
         />

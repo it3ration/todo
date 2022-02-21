@@ -24,25 +24,28 @@ const App = (props) => {
     }
   };
 
-  const makeTodo = async (task, completed, note) => {
+  const makeTodo = async (task, completed, note, frequency) => {
     try {
       const res = await axios.post("http://localhost:6969/todo/", {
         task: task,
         isCompleted: completed,
         note: note,
+        frequency: frequency,
       });
+      console.log(res);
       getData();
     } catch (e) {
       console.log(e);
     }
   };
 
-  const handleUpdate = async (id, task, completed, note) => {
+  const handleUpdate = async (id, task, completed, note, frequency) => {
     try {
       const res = await axios.put("http://localhost:6969/todo/" + id, {
         task: task,
         isCompleted: completed,
         note: note,
+        frequency: frequency,
       });
       //update the UI to reflect the changes that have been made.
       getData();

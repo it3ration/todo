@@ -14,6 +14,7 @@ const CreateTodo = (props) => {
       task: "",
       completed: "",
       note: "",
+      frequency: "",
     },
     validationSchema: Yup.object({
       task: Yup.string().required("Please enter a task!"),
@@ -24,13 +25,15 @@ const CreateTodo = (props) => {
         )
         .required("Please enter whether or not its completed!"),
       note: Yup.string().required("Please enter a note!"),
+      frequency: Yup.number().required("Please enter a number"),
     }),
     onSubmit: (values) => {
       try {
         props.create(
           formik.values.task,
           formik.values.completed,
-          formik.values.note
+          formik.values.note,
+          formik.values.frequency
         );
         alert("New Todo successfully created!!!");
       } catch (e) {
@@ -98,6 +101,20 @@ const CreateTodo = (props) => {
           {formik.touched.note && formik.errors.note ? (
             <div className="error-message">{formik.errors.note}</div>
           ) : null}
+          <label className="input-label" htmlFor="frequency">
+            frequency:
+          </label>
+          <input
+            type="text"
+            id="frequency"
+            name="frequency"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          ></input>
+          {formik.touched.frequency && formik.errors.frequency ? (
+            <div className="error-message">{formik.errors.frequency}</div>
+          ) : null}
+
           <div className="buttons">
             <button
               type="button"
@@ -105,7 +122,8 @@ const CreateTodo = (props) => {
                 props.create(
                   formik.values.task,
                   formik.values.completed,
-                  formik.values.note
+                  formik.values.note,
+                  formik.values.frequency
                 );
                 toggleForm();
               }}
